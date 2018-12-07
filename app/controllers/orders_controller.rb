@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
-
+    $succesful_order = enhanced_cart.clone
     if order.valid?
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
     Stripe::Charge.create(
       source:      params[:stripeToken],
       amount:      cart_subtotal_cents,
-      description: "Khurram Virani's Jungle Order",
+      description: "Taylor Cameron Jungle Order",
       currency:    'cad'
     )
   end
