@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize
-    redirect_to '/user/login' unless @current_user
+    redirect_to '/login' unless @current_user
   end
 
   private

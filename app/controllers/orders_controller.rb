@@ -1,13 +1,16 @@
 class OrdersController < ApplicationController
+  before_action :current_user
 
   def show
     @order = Order.find(params[:id])
+    @line_items = @order.line_items.all
+    p @line_items[0].product, 'FGDHGFHJFJHFHFHGFHGFGFHGFHGFHGFHGFGHFGFDFDSFDSDASDAFDDHGJHGKHFGFFDASD'
   end
 
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
-    $succesful_order = enhanced_cart.clone
+    UserMailer.order_email(@current_user).deliver_later
     if order.valid?
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
