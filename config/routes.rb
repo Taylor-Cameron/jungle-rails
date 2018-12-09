@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy', as: 'logout'
   post '/login', to: 'sessions#create', as: 'post_login'
   post '/user/sign_up', to: 'user#create', as: 'signup'
+  get '/reviews', to: 'review#new', as: 'reviews'
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]

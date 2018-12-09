@@ -26,6 +26,36 @@
       </div>
     </div>
 
+
   </article>
 
+  <header class="page-header">
+    <h1>Reviews:</h1>
+    <h3><%= link_to "Review this product", "/reviews" %></h3>
+  </header>
+
+  <article class="product-detail">
+
+    <div class="row">
+
+      <div class="col-sm-8">
+        <dl class="dl-horizontal">
+          <% @product.product_ratings.each do |review|%>
+          <dt>Rating: </dt>
+          <dd><%= create_rating_stars(review.rating)%></dd>
+          <dt>Description</dt>
+          <dd><%= review.description%></dd>
+          <dt>Submitted by:</dt>
+          <% if review.user_id %>
+          <dd><%= current_user.email%></dd>
+          <% end %>
+          <dt>_______________</dt>
+          <dd>______________________________________________________________________________________</dd>
+          <% end %>
+        </dl>
+      </div>
+    </div>
+
+
+  </article>
 </section>

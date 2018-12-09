@@ -35,7 +35,7 @@ puts "Re-creating Products ..."
 
 Product.destroy_all
 
-cat1.products.create!({
+pro1 = cat1.products.create!({
   name:  'Men\'s Classy shirt',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel1.jpg'),
@@ -43,7 +43,7 @@ cat1.products.create!({
   price: 64.99
 })
 
-cat1.products.create!({
+pro2 = cat1.products.create!({
   name:  'Women\'s Zebra pants',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel2.jpg'),
@@ -51,7 +51,7 @@ cat1.products.create!({
   price: 124.99
 })
 
-cat1.products.create!({
+pro3 = cat1.products.create!({
   name:  'Hipster Hat',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel3.jpg'),
@@ -59,7 +59,7 @@ cat1.products.create!({
   price: 34.49
 })
 
-cat1.products.create!({
+pro4 = cat1.products.create!({
   name:  'Hipster Socks',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel4.jpg'),
@@ -67,7 +67,7 @@ cat1.products.create!({
   price: 25.00
 })
 
-cat1.products.create!({
+pro5 = cat1.products.create!({
   name:  'Russian Spy Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel5.jpg'),
@@ -75,7 +75,7 @@ cat1.products.create!({
   price: 1_225.00
 })
 
-cat1.products.create!({
+pro6 = cat1.products.create!({
   name:  'Human Feet Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel6.jpg'),
@@ -130,6 +130,107 @@ cat3.products.create!({
   image: open_asset('furniture3.jpg'),
   quantity: 0,
   price: 2_483.75
+})
+
+#Users
+puts"Reacreating Users"
+User.destroy_all
+user1 = User.create!({
+  email: "example@example.com",
+  password: "asdf"
+})
+user2 = User.create!({
+  email: "test@example.com",
+  password: "1234"
+})
+user3 = User.create!({
+  email: "example@example.com",
+  password: "asdf"
+})
+user4 = User.create!({
+  email: "test@example.com",
+  password: "1234"
+})
+user5 = User.create!({
+  email: "example@example.com",
+  password: "asdf"
+})
+user6 = User.create!({
+  email: "test@example.com",
+  password: "1234"
+})
+user7 = User.create!({
+  email: "example@example.com",
+  password: "asdf"
+})
+user8 = User.create!({
+  email: "test@example.com",
+  password: "1234"
+})
+user9 = User.create!({
+  email: "example@example.com",
+  password: "asdf"
+})
+user10 = User.create!({
+  email: "test@example.com",
+  password: "1234"
+})
+user11 = User.create!({
+  email: "example@example.com",
+  password: "asdf"
+})
+user12 = User.create!({
+  email: "test@example.com",
+  password: "1234"
+})
+#Ratings
+
+puts "Recreating Ratings..."
+ProductRating.destroy_all
+pro1.product_ratings.create!({
+  user_id: user1.id,
+  rating: 5,
+  description: Faker::Hipster.paragraph(4)
+})
+pro2.product_ratings.create!({
+  user_id: user2.id,
+  rating: 3,
+  description: Faker::Hipster.paragraph(4)
+})
+pro3.product_ratings.create!({
+  user_id: user1.id,
+  rating: 5,
+  description: Faker::Hipster.paragraph(4)
+})
+pro2.product_ratings.create!({
+  user_id: user1.id,
+  rating: 1,
+  description: Faker::Hipster.paragraph(4)
+})
+pro2.product_ratings.create!({
+  user_id: user1.id,
+  rating: 2,
+  description: Faker::Hipster.paragraph(4)
+})
+pro5.product_ratings.create!({
+  user_id: user1.id,
+  rating: 2,
+  description: Faker::Hipster.paragraph(4)
+})
+pro5.product_ratings.create!({
+  user_id: user1.id,
+  rating: 2,
+  description: Faker::Hipster.paragraph(4)
+})
+pro4.product_ratings.create!({
+  user_id: user1.id,
+  rating: 2,
+  description: Faker::Hipster.paragraph(4)
+})
+pro3.product_ratings.create!({
+  user_id: user1.id,
+  rating: 2,
+  description: Faker::Hipster.paragraph(4)
 })
 
 
