@@ -34,3 +34,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 !["product page jungle app"](./public/uploads/screenshots/productpage.png)
 
 !["cart jungle app"](./public/uploads/screenshots/cart.png)
+
