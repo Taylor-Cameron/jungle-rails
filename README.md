@@ -29,9 +29,9 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Screenshots
 
-!["mainpage jungle app"](./public/uploads/screenshots/mainpage.png)
+!["mainpage jungle app"](images/mainpage.png)
 
-!["product page jungle app"](./public/uploads/screenshots/productpage.png)
+!["product page jungle app"](images/productpage.png)
 
-!["cart jungle app"](./public/uploads/screenshots/cart.png)
+!["cart jungle app"](images/cart.png)
 
